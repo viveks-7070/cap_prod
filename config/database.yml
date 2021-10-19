@@ -4,14 +4,17 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
-development:
-  adapter: postgresql
-  encoding: unicode
-  database: blog_development
+default: &default
+  adapter: mysql2
+  encoding: utf8mb
   pool: 5
-  username: postgres
+  username: root
   password: 
-  host: localhost
+  # socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: blog_dev
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
