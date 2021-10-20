@@ -68,6 +68,7 @@ GEM
     airbrussh (1.4.0)
       sshkit (>= 1.6.1, != 1.7.0)
     bcrypt (3.1.16)
+    bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     bootsnap (1.9.1)
       msgpack (~> 1.0)
@@ -105,6 +106,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    ed25519 (1.2.4)
     erubi (1.10.0)
     ffi (1.15.4)
     globalid (0.5.2)
@@ -245,6 +247,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt_pbkdf (>= 1.0, < 2.0)
   bootsnap (>= 1.4.2)
   byebug
   capistrano (~> 3.10)
@@ -254,8 +257,10 @@ DEPENDENCIES
   capybara (>= 2.15)
   devise (~> 4.7, >= 4.7.1)
   devise-bootstrapped!
+  ed25519 (>= 1.2, < 2.0)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
+  net-ssh (>= 6.0.2)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.2)
